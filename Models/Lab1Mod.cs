@@ -1,7 +1,13 @@
+using System;
+using System.Linq;
+using System.Runtime.Serialization;
+using System.Text;
+
 namespace to.Models
 {
     public class Lab1Mod
     {
+         public Guid Id { get; set; } = Guid.Empty;
         public string FIO { get; set; }
         public string Group { get; set; }
         public int Curs { get; set; }
@@ -24,8 +30,6 @@ namespace to.Models
             validationResult.Append($"Curs {Curs} is out of range (1..4)");
             if (!(0 < Number_stud && Number_stud < 999))
             validationResult.Append($"Number_stud {Number_stud} is out of range (0..999)");
-            //if (!string.IsNullOrEmpty(FIO) && char.IsUpper(FIO.FirstOrDefault())) 
-           // validationResult.Append($"FIO {FIO} should start from capital letter");
             return validationResult;
         }
         public override string ToString()
