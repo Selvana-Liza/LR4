@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Microsoft.AspNetCore.Mvc;
 using to.Models;
 using to.Storage;
+using System.Net.Http;
 
 namespace to.Controllers
 {
@@ -11,7 +12,7 @@ namespace to.Controllers
     public class LabController : ControllerBase
     {
         private static IStorage<Lab1Mod> _memCache = new MemCache();
- 
+        
         [HttpGet]
         public ActionResult<IEnumerable<Lab1Mod>> Get()
         {
@@ -22,6 +23,7 @@ namespace to.Controllers
         public ActionResult<Lab1Mod> Get(Guid id)
         {
             if (!_memCache.Has(id)) return NotFound("No such");
+
             return Ok(_memCache[id]);
      }
     
@@ -56,4 +58,6 @@ namespace to.Controllers
             return Ok($"{valueToRemove.ToString()} has been removed");
         }
     }
+    
+
 }
