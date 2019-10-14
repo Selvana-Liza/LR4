@@ -2,6 +2,10 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp2.1</TargetFramework>
+    <Authors>Petrova E.I.</Authors>
+    <Company>yaahooo.com</Company>
+    <Product>Lab 5</Product>
+    <PackageId>MyApp</PackageId>
   </PropertyGroup>
 
   <ItemGroup>
@@ -15,6 +19,10 @@
     </PackageReference>
     <PackageReference Include="Microsoft.AspNetCore.App" />
     <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.1.2" PrivateAssets="All" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <DotNetCliToolReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Tools" Version="2.0.2" />
   </ItemGroup>
 
 </Project>

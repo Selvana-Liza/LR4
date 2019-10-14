@@ -15,14 +15,14 @@ namespace to.Storage
             {
                 lock (_sync)
                 {
-                    if (!Has(id)) throw new IncorrectLabDataException($"No Lab1Mod with id {id}");
+                    if (!Has(id)) throw new IncorrectLabDataException($"No LabData with id {id}");
 
                     return _memCache.Single(x => x.Id == id);
                 }
             }
             set
             {
-                if (id == Guid.Empty) throw new IncorrectLabDataException("Cannot request Lab1Mod with an empty id");
+                if (id == Guid.Empty) throw new IncorrectLabDataException("Cannot request LabData with an empty id");
 
                 lock (_sync)
                 {
@@ -60,4 +60,4 @@ namespace to.Storage
             }
         }
     }
-} 
+}

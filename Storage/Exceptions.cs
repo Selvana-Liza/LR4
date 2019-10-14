@@ -8,6 +8,8 @@ namespace to.Storage
         public IncorrectLabDataException(string message, System.Exception inner) : base(message, inner) { }
         protected IncorrectLabDataException(
             System.Runtime.Serialization.SerializationInfo info,
-            System.Runtime.Serialization.StreamingContext context) : base(info, context) { }
+            System.Runtime.Serialization.StreamingContext context) : base(info, context) { 
+
+            }
     }
-} 
+}
