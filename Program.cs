@@ -19,7 +19,6 @@ namespace to
 
         public static IWebHostBuilder CreateWebHostBuilder(string[] args) =>
             WebHost.CreateDefaultBuilder(args)
-                .UseKestrel()
                 .UseStartup<Startup>();
     }
 }
